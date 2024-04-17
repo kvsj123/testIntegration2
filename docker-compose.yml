@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: nginx/Dockerfile
     ports: 
-      - "8080:80"
+      - "40000:80"
     networks:
       - internal
     volumes:
@@ -45,7 +45,7 @@ services:
     container_name: phpmyadmin
     image: phpmyadmin/phpmyadmin
     ports:
-      - "8080:80"
+      - "40001:80"
     environment:
       PMA_HOST: db
       PMA_PORT: 3306
