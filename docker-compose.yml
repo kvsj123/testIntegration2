@@ -5,7 +5,7 @@ services:
       context: .
       dockerfile: nginx/Dockerfile
     ports: 
-      - "8080:80"
+      - "40000:80"
     networks:
       - internal
     volumes:
@@ -32,9 +32,10 @@ services:
     ports:
      - "3306:3306"
     environment:
-      MYSQL_ROOT_PASSWORD: 'root'
+      MYSQL_ROOT_PASSWORD: ''
       MYSQL_USER: 'root'
-      MYSQL_PASS: 
+      MYSQL_PASS: ''
+      MYSQL_DATABASE: 'hackathon'
     volumes:
       - ./db-data:/var/lib/mysql
     networks:
