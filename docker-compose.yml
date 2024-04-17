@@ -59,4 +59,7 @@ networks:
   internal:
     driver: bridge
 
+
+volumes:
+  phpmyadmin-data:
     
